@@ -7,7 +7,6 @@ object salaryRaiser {
     salaries.map (salary=> salary * math.log(salary))
   def hugePromotion(salaries:List[Double]):List[Double] = {
     salaries.map (salary=> salary * salary)
-    smallPromotion(5000.25)
 
   }
 }

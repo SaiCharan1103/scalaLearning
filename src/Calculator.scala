@@ -1,14 +1,29 @@
-class Calculator (add,sub,mul,div,per,mean){
-  val add=a+b
-  val sub=a-b
-  val mul=a*b
-  val div=a/b
-  val per=a%b
-  val mean=(a+b)/2
-}
+object Calculator {
+  def main(args: Array[String]) {
+    var ch:Char=0
+    var num1:Int=0
+    var num2:Int=0
+    var result:Int=0
 
-def main(args: Array[String]): Unit = {
-  var a=10
-  var b=20
-  println(add)
+    print("Choose operation to perform (+,-,*,/,%,m): ")
+    ch=scala.io.StdIn.readChar()
+
+    print("Enter first number: ")
+    num1=scala.io.StdIn.readInt()
+
+    print("Enter second number: ")
+    num2=scala.io.StdIn.readInt()
+
+    ch match{
+      case '+'=> result=num1+num2
+      case '-'=> result=num1-num2
+      case '*'=> result=num1*num2
+      case '/'=> result=num1/num2
+      case '%'=> result=num1%num2
+      case 'm'=>result=(num1+num2)/2
+      case _=>printf("Invalid operation.\n")
+    }
+    println("Result: "+result);
+  }
+
 }
